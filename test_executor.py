@@ -23,22 +23,11 @@ for i in sorted(valid_pairs):
 	inp = open("in/"+i+".txt", "r", encoding = "utf8").readlines()
 	exp = open("exp/"+i+".txt", "r", encoding = "utf8").read()
 	is_same = main(inp) == exp
+	exec ("def test_"+i+"(): assert success[int(inspect.stack()[0][3].split('test_')[1])]")
 	success[int(i)]=is_same
+	exec ("test_"+str(i))
 
-def test_0():
-	assert success[int(inspect.stack()[0][3].split("test_")[1])]
-def test_1():
-	assert success[int(inspect.stack()[0][3].split("test_")[1])]
-def test_2():
-	assert success[int(inspect.stack()[0][3].split("test_")[1])]
-def test_3():
-	assert success[int(inspect.stack()[0][3].split("test_")[1])]
-def test_4():
-	assert success[int(inspect.stack()[0][3].split("test_")[1])]
-def test_5():
-	assert success[int(inspect.stack()[0][3].split("test_")[1])]
-def test_10():
-	assert success[int(inspect.stack()[0][3].split("test_")[1])]
-def test_15():
-	assert success[int(inspect.stack()[0][3].split("test_")[1])]
+	
+	
+
 
