@@ -1,6 +1,7 @@
 import os
 from problem import main
 import unittest
+import inspect
 
 
 input = set()
@@ -25,15 +26,19 @@ for i in sorted(valid_pairs):
 	success[int(i)]=is_same
 
 def test_0():
-	assert success[0]
+	assert success[int(inspect.stack()[0][3].split("test_")[1])]
 def test_1():
-	assert success[1]
+	assert success[int(inspect.stack()[0][3].split("test_")[1])]
 def test_2():
-	assert success[2]
+	assert success[int(inspect.stack()[0][3].split("test_")[1])]
 def test_3():
-	assert success[2]
+	assert success[int(inspect.stack()[0][3].split("test_")[1])]
+def test_4():
+	assert success[int(inspect.stack()[0][3].split("test_")[1])]
+def test_5():
+	assert success[int(inspect.stack()[0][3].split("test_")[1])]
 def test_10():
-	assert success[10]
+	assert success[int(inspect.stack()[0][3].split("test_")[1])]
 def test_15():
-	assert success[15]
+	assert success[int(inspect.stack()[0][3].split("test_")[1])]
 

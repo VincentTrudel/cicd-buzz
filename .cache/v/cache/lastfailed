@@ -1,3 +1,6 @@
 {
-  "test_executor.py::test_10": true
+  "test_executor.py::test_10": true,
+  "test_executor.py::test_3": true,
+  "test_executor.py::test_4": true,
+  "test_executor.py::test_5": true
 }
