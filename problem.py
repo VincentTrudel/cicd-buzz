@@ -5,13 +5,16 @@ import re
 import sys
 # Complete the abbreviation function below.
 def abbreviation(a, b):
-	#print(a)
-	a = "".join([c for c in list(a) if c.isupper() or (c.lower() in b.lower())])
-	if a.upper() == b.upper():
-		ret = "YES"
-	else:
-		ret = "NO"
-	return ret
+	a = a.upper()
+	i=0
+	j=0
+	while j < len(b):
+		while a[i] != b[j]:
+			i+=1
+			if i==len(a):
+				return "NO"
+		j+=1
+	return "YES"
 	
 	
 def main(inp):

@@ -24,6 +24,8 @@ for i in sorted(valid_pairs):
 	exp = open("exp/"+i+".txt", "r", encoding = "utf8").read()
 	is_same = main(inp) == exp
 	exec ("def test_"+i+"(): assert success[int(inspect.stack()[0][3].split('test_')[1])]")
+	#This creates a function for every test so that pytest recognizes it and debugs per function
+	
 	success[int(i)]=is_same
 	exec ("test_"+str(i))
 
