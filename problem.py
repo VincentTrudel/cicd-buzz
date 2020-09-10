@@ -14,12 +14,12 @@ def abbreviation(a, b):
 	return ret
 	
 	
-def main(input):
+def main(inp):
 	output = ""
-	q = int(input[0].rstrip())
+	q = int(inp[0].rstrip())
 	for q_itr in range(q):
-		a = input[q_itr*2+1].rstrip()
-		b = input[q_itr*2+2].rstrip()
+		a = inp[q_itr*2+1].rstrip()
+		b = inp[q_itr*2+2].rstrip()
 		result = abbreviation(a, b)
 		output+=result + '\n'
 
