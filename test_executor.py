@@ -30,6 +30,8 @@ def test_1():
 	assert success[1]
 def test_2():
 	assert success[2]
+def test_3():
+	assert success[2]
 def test_10():
 	assert success[10]
 def test_15():
