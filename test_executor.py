@@ -47,17 +47,16 @@ for i in sorted(valid_pairs):
 	
 	exec ("def test_"+i+"(): assert success[int(inspect.stack()[0][3].split('test_')[1])]")
 	#This creates a function for every test so that pytest recognizes it and asserts once per test
-	
 
-	passed = out == exp
 	
-	success[int(i)]= passed
-	if not passed:
-		#print(lcs(exp_lines, out_lines), max(len(exp_lines), len(out_lines)))
-		#print("In:\n"+"\n".join(inp))
-		#print("Test "+str(i)+" failed")
-		#print("Out:\n"+out)
-		#print("Expected:\n"+exp)
+	success[int(i)]= out == exp
+	'''if not passed:
+		print(lcs(exp_lines, out_lines), max(len(exp_lines), len(out_lines)))
+		print("In:\n"+"\n".join(inp))
+		print("Test "+str(i)+" failed")
+		print("Out:\n"+out)
+		print("Expected:\n"+exp)
+		'''
 	exec ("test_"+str(i))
 
 print(sum([int(x) for x in list(success.values())]))
