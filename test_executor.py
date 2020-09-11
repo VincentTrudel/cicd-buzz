@@ -56,12 +56,12 @@ for i in sorted(valid_pairs):
 		print("Test "+str(i)+" failed")
 		print("Out:\n"+out)
 		print("Expected:\n"+exp)
-		'''
+	'''
 	exec ("test_"+str(i))
 
 print(sum([int(x) for x in list(success.values())]))
 print(len(success))
-	
+
 	
 
 
