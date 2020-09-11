@@ -1,3 +1,14 @@
 {
-  "test_executor.py": true
+  "test_executor.py::test_1": true,
+  "test_executor.py::test_10": true,
+  "test_executor.py::test_12": true,
+  "test_executor.py::test_13": true,
+  "test_executor.py::test_14": true,
+  "test_executor.py::test_15": true,
+  "test_executor.py::test_2": true,
+  "test_executor.py::test_3": true,
+  "test_executor.py::test_5": true,
+  "test_executor.py::test_6": true,
+  "test_executor.py::test_8": true,
+  "test_executor.py::test_9": true
 }

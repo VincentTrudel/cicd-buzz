@@ -40,10 +40,10 @@ for i in sorted(valid_pairs):
 	inp = open("in/"+i+".txt", "r", encoding = "utf8").readlines()
 	exp = open("exp/"+i+".txt", "r", encoding = "utf8").read()
 	out = main(inp)
-	exp_lines = exp.split("\n")
-	out_lines = out.split("\n")
+	#exp_lines = exp.split("\n")
+	#out_lines = out.split("\n")
 
-	pct_same = lcs(exp, out)/max(len(exp), len(out))
+	#pct_same = lcs(exp, out)/max(len(exp), len(out))
 	
 	exec ("def test_"+i+"(): assert success[int(inspect.stack()[0][3].split('test_')[1])]")
 	#This creates a function for every test so that pytest recognizes it and asserts once per test
