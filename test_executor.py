@@ -43,7 +43,7 @@ for i in sorted(valid_pairs):
 	exp_lines = exp.split("\n")
 	out_lines = out.split("\n")
 
-	#pct_same = lcs(exp, out)/max(len(exp), len(out))
+	pct_same = lcs(exp, out)/max(len(exp), len(out))
 	
 	exec ("def test_"+i+"(): assert success[int(inspect.stack()[0][3].split('test_')[1])]")
 	#This creates a function for every test so that pytest recognizes it and asserts once per test
@@ -53,7 +53,7 @@ for i in sorted(valid_pairs):
 	
 	success[int(i)]= passed
 	if not passed:
-		print(lcs(exp_lines, out_lines), max(len(exp_lines), len(out_lines)))
+		#print(lcs(exp_lines, out_lines), max(len(exp_lines), len(out_lines)))
 		#print("In:\n"+"\n".join(inp))
 		#print("Test "+str(i)+" failed")
 		#print("Out:\n"+out)
