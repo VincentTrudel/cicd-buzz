@@ -5,8 +5,39 @@ import re
 import sys
 from collections import Counter
 # Complete the abbreviation function below.
+
 def abbreviation(a, b):
+	
+	ca_upper = Counter([c for c in a if c.isupper()])
+	cb = Counter(b)
+	try:
+		for c in ca_upper.keys():
+			if ca_upper[c]>cb[c]:
+				return "NO"
+	except KeyError:
+		return "NO"
+	
+	m = len(a)
+	n = len(b)
+
+	L = [[None]*(n + 1) for i in range(m + 1)] 
+
+	for i in range(m + 1): 
+		for j in range(n + 1):
+			if i == 0 or j == 0 : 
+				L[i][j] = 0
+			elif a[i-1].upper() == b[j-1]: 
+				L[i][j] = L[i-1][j-1]+1
+			else: 
+				L[i][j] = max(L[i-1][j], L[i][j-1]) 
+
+	if L[m][n] == n:
+		return "YES"
+				
 	return "NO"
+
+	
+	
 
 
 def main(inp):
